@@ -1,7 +1,7 @@
 libphonenumber
 ==============
 
-Google's libphonenumber as an easily included JavaScript library.
+Google's libphonenumber as an easily included JavaScript library. Fork of [nathanhammond/libphonenumber](https://github.com/nathanhammond/libphonenumber) modified to remove all methods outside of `isValidNumberForRegion` to reduce file size. Tested against libphonenumber 8.5.0.
 
 Exports
 -------
@@ -9,20 +9,7 @@ Exports
 This library adds the global `phoneUtils` with the following methods:
 
 ```js
-phoneUtils.countryCodeToRegionCodeMap();
-phoneUtils.isPossibleNumber(phoneNumber, regionCode);
-phoneUtils.isPossibleNumberWithReason(phoneNumber, regionCode);
-phoneUtils.isValidNumber(phoneNumber, regionCode);
 phoneUtils.isValidNumberForRegion(phoneNumber, regionCode);
-phoneUtils.getCountryCodeForRegion(regionCode);
-phoneUtils.getRegionCodeForNumber(phoneNumber, regionCode);
-phoneUtils.getNumberType(phoneNumber, regionCode);
-phoneUtils.getSupportedRegions();
-phoneUtils.formatE164(phoneNumber, regionCode);
-phoneUtils.formatNational(phoneNumber, regionCode);
-phoneUtils.formatInternational(phoneNumber, regionCode);
-phoneUtils.formatInOriginalFormat(phoneNumber, regionCode);
-phoneUtils.formatOutOfCountryCallingNumber(phoneNumber, regionCode, target);
 ```
 
 How it works
@@ -38,8 +25,3 @@ Before you run the build script, ensure you have these tools installed and prese
 * [Ant](http://ant.apache.org/)
 * [Ant-Contrib](http://ant-contrib.sourceforge.net/)
 * [Maven](http://maven.apache.org/)
-
-Contributing
-------------
-
-I only semi-actively maintain this code. Fortunately it's very little more than a build system on top of the public project. If you're interested in a feature I've not included I'll be glad to help you as I can, but I'm not terribly familiar with Closure Compiler and won't necessarily be the best help. Your goal would be to port something that's working inside of `vendor/libphonenumber/javascript/i18n/phonenumbers/demo.js` to be runnable as a series of methods inside of `libphonenumber.js`. I will review PRs!
