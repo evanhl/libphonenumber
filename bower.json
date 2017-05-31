@@ -1,8 +1,8 @@
 {
-  "name": "libphonenumber-isvalidnumber",
+  "name": "libphonenumber",
   "main": "dist/libphonenumber.js",
   "version": "0.1.0",
-  "homepage": "https://github.com/evanhl/libphonenumber-isvalidnumber",
+  "homepage": "https://github.com/evanhl/libphonenumber",
   "authors": [
     "Nathan Hammond <nathan@nathanhammond.com>",
     "Evan Owski <evowski@linkedin.com>"
