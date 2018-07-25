@@ -1,11 +1,8 @@
 goog.require('i18n.phonenumbers.PhoneNumberUtil');
 
-var phoneUtil = i18n.phonenumbers.PhoneNumberUtil.getInstance();
+var phoneUtils = i18n.phonenumbers.PhoneNumberUtil.getInstance();
 
-function isValidNumberForRegion(phoneNumber, regionCode) {
-  regionCode = regionCode || "us";
-  var number = phoneUtil.parseAndKeepRawInput(phoneNumber, regionCode);
-  return phoneUtil.isValidNumberForRegion(number, regionCode);
-}
-
-goog.exportSymbol('phoneUtils.isValidNumberForRegion', isValidNumberForRegion);
+goog.exportSymbol('phoneUtils', phoneUtils);
+goog.exportSymbol('phoneUtils.isValidNumberForRegion', phoneUtils.isValidNumberForRegion);
+goog.exportSymbol('phoneUtils.parseAndKeepRawInput', phoneUtils.parseAndKeepRawInput);
+goog.exportSymbol('phoneUtils.getNationalSignificantNumber', phoneUtils.getNationalSignificantNumber);
